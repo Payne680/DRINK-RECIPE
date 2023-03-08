@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { register } from '../../api/auth';
+import NavBar from '../NavBar/NavBar';
 import './Register.css';
 
-function Register() {
+export default function Register() {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -11,42 +12,52 @@ function Register() {
     e.preventDefault();
     const { target } = e;
     const data = {
-      firstName: target.firstName.value,
-      lastName: target.lastName.value,
-      emailAddress: target.emailAddress.value,
+      first_name: target.first_name.value,
+      last_name: target.last_name.value,
+      email_address: target.email_address.value,
       phone: target.phone.value,
       password: target.password.value,
       passwordConfirmation: target.passwordConfirmation.value,
     };
-
     setIsLoading(true);
     await register(data);
     setIsLoading(false);
     navigate('/login');
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Please create your account</h1>
-      <p>{isLoading ? 'Loading...' : ''}</p>
-      <input type="text" placeholder="First Name" name="firstName" required />
-      <input type="text" placeholder="Last Name" name="lastName" required />
-      <input
-        type="email"
-        placeholder="Email Address"
-        name="emailAddress"
-        required
-      />
-      <input type="phone" placeholder="Phone Number" name="phone" />
-      <input type="password" placeholder="Password" name="password" required />
-      <input
-        type="password"
-        placeholder="Password Confirmation"
-        name="passwordConfirmation"
-        required
-      />
-      <button type="submit">Create Account</button>
-    </form>
+    <div>
+      <NavBar />
+      <form onSubmit={handleSubmit}>
+        <h1> Create An Account</h1>
+        <p>{isLoading ? 'Loading...' : ''}</p>
+        <input
+          type="text"
+          placeholder="First Name"
+          name="first_name"
+          required
+        />
+        <input type="text" placeholder="Last Name" name="last_name" required />
+        <input
+          type="email"
+          placeholder="Email Address"
+          name="email_address"
+          required
+        />
+        <input type="phone" placeholder="Phone Number" name="phone" />
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password Confirmation"
+          name="passwordConfirmation"
+          required
+        />
+        <button type="submit">Create Account</button>
+      </form>
+    </div>
   );
 }
-
-export default Register;

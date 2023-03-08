@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -8,19 +10,19 @@ function NavBar() {
         <nav>
           <ul>
             <li>
-              <a href="d">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="h">Sign Up</a>
+              <Link to="/register">Sign Up</Link>
             </li>
             <li>
-              <a href="a">Sign In</a>
+              <Link to="/login">Sign In</Link>
             </li>
             <li>
-              <a href="b">About Us</a>
+              <Link to="/">About Us </Link>
             </li>
             <li>
-              <a href="c">Contact Us</a>
+              <Link to="/">Contact Us</Link>
             </li>
           </ul>
         </nav>
