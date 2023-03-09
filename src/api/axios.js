@@ -1,5 +1,6 @@
-/* eslint-disable no-param-reassign */
+/* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
+/* eslint-disable no-param-reassign */
 import axios from 'axios';
 import { API_BASE_URL } from '../constants';
 import { readToken } from '../utils';
@@ -13,7 +14,9 @@ httpClient.interceptors.request.use(
     config.headers.Authorization = `Bearer: ${readToken()}`;
     return config;
   },
-  (error) => Promise.reject(error)
+  function (error) {
+    return Promise.reject(error);
+  }
 );
 
 export { httpClient };
