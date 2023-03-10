@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { register } from '../../api/auth';
 import NavBar from '../NavBar/NavBar';
 import './Register.css';
 
 export default function Register() {
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -20,9 +21,13 @@ export default function Register() {
       passwordConfirmation: target.passwordConfirmation.value,
     };
     setIsLoading(true);
-    await register(data);
-    setIsLoading(false);
-    navigate('/login');
+    if (target.password.value === target.passwordConfirmation.value) {
+      await register(data);
+      setIsLoading(false);
+      navigate('/login');
+    } else {
+      setError('Passwords do not match');
+    }
   };
   return (
     <div>
@@ -56,7 +61,11 @@ export default function Register() {
           name="passwordConfirmation"
           required
         />
+        {error && <p className="error">{error}</p>}
         <button type="submit">Create Account</button>
+        <p>
+          Already have an account? <Link to="/login">login</Link>
+        </p>
       </form>
     </div>
   );

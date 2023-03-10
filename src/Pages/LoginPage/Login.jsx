@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../api/auth';
 import { saveToken } from '../../utils';
 import NavBar from '../NavBar/NavBar';
@@ -31,7 +31,6 @@ function Login() {
     } finally {
       setIsLoading(false);
     }
-    navigate('/dashboard');
   };
   return (
     <>
@@ -53,6 +52,9 @@ function Login() {
           required
         />
         <button type="submit">Login</button>
+        <p>
+          Do not have an account? <Link to="/register">Sign Up</Link>
+        </p>
       </form>
     </>
   );

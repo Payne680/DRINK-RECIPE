@@ -2,11 +2,10 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable no-param-reassign */
 import axios from 'axios';
-import { API_BASE_URL } from '../constants';
 import { readToken } from '../utils';
 
 const httpClient = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: process.env.REACT_APP_API_BASE_URL,
 });
 
 httpClient.interceptors.request.use(

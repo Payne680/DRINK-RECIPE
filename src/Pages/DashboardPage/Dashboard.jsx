@@ -12,7 +12,7 @@ function Dashboard() {
     <>
       <h1>Dashboard Page</h1>
       <p>
-        {user?.firstName} {user?.lastName}
+        {user?.first_name} {user?.last_name}
       </p>
     </>
   );
