@@ -1,11 +1,17 @@
-/* body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-  } */
+  ::placeholder {
+    color: #fff;
+    opacity: 1;
+  }
 
+  .formz {
+    height: 100vh;
+    background-image: url("./1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff;
+  }
 
 h1 {
   margin: 10px 0;
@@ -16,7 +22,6 @@ p {
 }
 
 .error {
-  font-size: 10px;
   color: red;
 }
 
@@ -25,25 +30,54 @@ form {
   display: flex;
   flex-direction: column;
   border: transparent;
-  gap: 20px;
+  gap: 17px;
   margin: auto;
   padding: 10px;
 }
 
 input {
-  height: 40px;
+  /* height: 40px;
   padding: 5px 10px;
   box-sizing: border-box;
-  border-radius: 20px;
+  border-radius: 20px; */
+
+    height: 45px;
+    width: 87%;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background-color: rgba(255,255,255,0.1);
+    outline: none;
 }
 
 button {
-  width: 100%;
+  /* width: 100%;
   text-align: center;
   padding: 15px;
   background-color: rgb(80, 65, 94);
   color: white;
   border: 1px solid rgb(96, 83, 108);
   border-radius: 10px;
-  cursor: pointer;
+  cursor: pointer; */
+
+  border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    background: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: .3s ;
+}
+
+.linkz {
+  color: #fff;
+  margin: 3px;
+}
+
+.linkz:hover {
+  color: greenyellow;
 }

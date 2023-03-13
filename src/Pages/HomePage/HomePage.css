@@ -19,3 +19,15 @@
     font-family: 'Sofia';
     font-size: 51px;
 }
+
+.btn {
+  width: 5%;
+  margin: 20px;
+  border-radius: 15px;font-family: 'sofia';
+
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: rgb(80, 65, 94);
+}

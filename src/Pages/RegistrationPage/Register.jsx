@@ -30,7 +30,7 @@ export default function Register() {
     }
   };
   return (
-    <div>
+    <div className="formz">
       <NavBar />
       <form onSubmit={handleSubmit}>
         <h1> Create An Account</h1>
@@ -64,7 +64,10 @@ export default function Register() {
         {error && <p className="error">{error}</p>}
         <button type="submit">Create Account</button>
         <p>
-          Already have an account? <Link to="/login">login</Link>
+          Have an account?
+          <Link className="linkz" to="/login">
+            login
+          </Link>
         </p>
       </form>
     </div>

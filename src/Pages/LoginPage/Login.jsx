@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../api/auth';
 import { saveToken } from '../../utils';
 import NavBar from '../NavBar/NavBar';
+import './Login.css';
 
 function Login() {
   const [isLoading, setIsLoading] = useState(false);
@@ -33,30 +34,40 @@ function Login() {
     }
   };
   return (
-    <>
+    <div className="logz">
       <NavBar />
       <form onSubmit={handleSubmit}>
         <h1> Login Your Account</h1>
         {isLoading && <p>Loading...</p>}
         {error && <p className="error">{error}</p>}
-        <input
-          type="email"
-          placeholder="Email Address"
-          name="email_address"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          required
-        />
+        <div className="input-field">
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email_address"
+            required
+          />
+          <i className="bx bx-user" />
+        </div>
+        <div className="input-field">
+          <input
+            className="input-field"
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+          <i className="bx bx-lock-alt" />
+        </div>
         <button type="submit">Login</button>
         <p>
-          Do not have an account? <Link to="/register">Sign Up</Link>
+          Do not have an account?
+          <Link className="linkz" to="/register">
+            Sign Up
+          </Link>
         </p>
       </form>
-    </>
+    </div>
   );
 }
 

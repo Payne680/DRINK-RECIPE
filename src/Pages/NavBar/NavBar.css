@@ -24,7 +24,7 @@
     transition: 0.7s all;
   }
   nav ul li:hover{
-    background-color:#088;
+  background-color: rgb(80, 65, 94);
   }
   nav ul li a{
     text-decoration: none;

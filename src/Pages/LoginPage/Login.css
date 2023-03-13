@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+*{
+font-family: 'Times New Roman', Times, serif ;
+}
+.logz{
+    height: 100vh;
+    background-image: url("./1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff;
+    user-select: none;
+}
+
+i{
+    position: relative;
+    top: -33px;
+    left: 17px;
+    color: #fff;
+}
