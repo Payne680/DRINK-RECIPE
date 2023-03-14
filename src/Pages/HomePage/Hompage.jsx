@@ -16,20 +16,12 @@ function HomePage() {
           <br />
           of us who want to see our whiskey open up without a label in the way."
         </p>
-        <Link to="/register">
+        <Link to="/explore">
           <button className="btn" type="button">
-            Sign Up
-          </button>
-        </Link>
-        <Link to="/login">
-          <button className="btn" type="button">
-            Login
+            Explore
           </button>
         </Link>
       </div>
-      <Link className="linkz" to="Explore">
-        Explore for more details
-      </Link>
     </div>
   );
 }

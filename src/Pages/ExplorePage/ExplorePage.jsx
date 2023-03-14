@@ -1,9 +1,44 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ExplorePage.css';
 
 function Explore() {
+  const [sideMenuData, setSideData] = React.useState([
+    {
+      title: 'Drinks',
+      list: ['drink 1', 'drink 2', 'drink 3'],
+      showList: false,
+    },
+    {
+      title: 'Categories',
+      list: ['category 1', 'category 2', 'category 3'],
+      showList: false,
+    },
+    {
+      title: 'Ingredients',
+      list: ['ingre 1', 'ingre 2', 'ingre 3'],
+      showList: false,
+    },
+    {
+      title: 'Glass',
+      list: ['glass 1', 'glass 2', 'glass 3'],
+      showList: false,
+    },
+    {
+      title: 'Is Alcoholic',
+      list: ['Yes', 'No', 'Both'],
+      showList: false,
+    },
+  ]);
+
+  const toggleList = (index) => {
+    const holder = sideMenuData;
+    holder[index].showList = !holder[index].showList;
+    setSideData(() => [...holder]);
+  };
+
   return (
     <div>
       <input type="checkbox" id="check" />
@@ -12,27 +47,27 @@ function Explore() {
         <i className="fa fa-times" id="cancel" />
       </label>
       <div className="sidebar">
-        <header>Categories</header>
+        <header>Whiskey Sour</header>
         <ul>
-          <li>
-            <a href="whiskey">
-              <i className="fa-solid fa-whiskey-glass-ice" /> Whiskey
-            </a>
-          </li>
-          <li>
-            <a href="champagne">Champagne</a>
-          </li>
-          <li>
-            <a href="jin">Jin</a>
-          </li>
-          <li>
-            <a href="coke">Cocktail</a>
-          </li>
-          <li>
-            <a href="beer">
-              <i className="fa-duotone fa-beer-mug" /> Beer
-            </a>
-          </li>
+          {sideMenuData.map(({ title, list, showList }, index) => (
+            <li key={title}>
+              <a href="#" onClick={() => toggleList(index)}>
+                {title}
+              </a>
+              {showList &&
+                list.map((item) => (
+                  <label className="labz" htmlFor={item}>
+                    <input
+                      type={title !== 'Is Alcoholic' ? 'checkbox' : 'radio'}
+                      name=""
+                      id={item}
+                    />
+                    {item}
+                  </label>
+                ))}
+            </li>
+          ))}
+
           <div className="homez">
             <Link to="/">Home</Link>
           </div>

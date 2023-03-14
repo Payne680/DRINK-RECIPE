@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useEffect, useState } from 'react';
 import { getCurrentUser } from '../../api/auth';
 import './Dashboard.css';
@@ -11,40 +10,12 @@ function Dashboard() {
   }, []);
 
   return (
-    <>
-      <input type="checkbox" id="check" />
-      <label htmlFor="check">
-        <i className="fa fa-bars" id="btn" />
-        <i className="fa fa-times" id="cancel" />
-      </label>
-      <div className="sidebar">
-        <header>Categories</header>
-        <ul>
-          <li>
-            <a href="whiskey">
-              <i className="fa-solid fa-whiskey-glass-ice" /> Whiskey
-            </a>
-          </li>
-          <li>
-            <a href="champagne">Champagne</a>
-          </li>
-          <li>
-            <a href="jin">Jin</a>
-          </li>
-          <li>
-            <a href="coke">Cocktail</a>
-          </li>
-          <li>
-            <a href="beer">
-              <i className="fa-duotone fa-beer-mug" /> Beer
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div className="dash">
+      <h1 className="head">WELCOME TO YOUR DASHBOARD</h1>
       <p>
         {user?.first_name} {user?.last_name}
       </p>
-    </>
+    </div>
   );
 }
 

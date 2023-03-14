@@ -5,9 +5,13 @@
     list-style: none;
     text-decoration: none;
   }
+
+  header {
+    font-family: 'sofia';
+  }
   
   .sidebar{
-    position: fixed;
+    position: absolute;
     left: -250px;
     width: 250px;
     height: 100vh;
@@ -37,9 +41,10 @@
     border-bottom: 1px solid blue;
     transition: .4s;
     text-align: center;
+    font-family: 'sofia';
   }
   
-  ul li:hover a{
+  .sidebar ul li:hover a{
     padding-left: 50px;
   }
   
@@ -91,7 +96,15 @@
   }
   
   .homez {
-    margin-top: 80%;
     cursor: pointer;
+  }
+
+  .homez:hover {
+    background-color: rgb(80, 65, 94);
+    transition: 0.92s;
+  }
+
+  lable {
+    background-color: aqua;
   }
   
