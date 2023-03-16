@@ -1,3 +1,4 @@
+/* eslint-disable dot-notation */
 /* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable no-param-reassign */
@@ -10,7 +11,7 @@ const httpClient = axios.create({
 
 httpClient.interceptors.request.use(
   function (config) {
-    config.headers.Authorization = `Bearer: ${readToken()}`;
+    config.headers['Authorization'] = `Bearer: ${readToken()}`;
     return config;
   },
   function (error) {
