@@ -3,11 +3,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MyContext from '../../context';
 import './ExplorePage.css';
 
 function Explore() {
-  const { data } = useContext(MyContext);
   const [sideMenuData, setSideData] = React.useState([
     {
       title: 'Drinks',
@@ -43,25 +41,7 @@ function Explore() {
   };
 
   return (
-    <div className="main">
-      <header className="header">
-        <h1 className="header__h1">Drinks Available!!</h1>
-      </header>
-      <div className="drinks_display">
-        {data.map((drinks) => {
-          return (
-            <div key={drinks.name} className="drink_card">
-              <img src={drinks.src} alt="drinks" className="images" />
-              <h2>{drinks.name}</h2>
-              <p>{drinks.description}</p>
-              <ul>
-                <li>{drinks.ingredients}</li>
-              </ul>
-              <p>{drinks.userId}</p>
-            </div>
-          );
-        })}
-      </div>
+    <div>
       <input type="checkbox" id="check" />
       <label htmlFor="check">
         <i className="fa fa-bars" id="btn" />

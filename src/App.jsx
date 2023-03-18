@@ -7,6 +7,7 @@ import Register from './Pages/RegistrationPage/Register';
 import Dashboard from './Pages/DashboardPage/Dashboard';
 import HomePage from './Pages/HomePage/Hompage';
 import Explore from './Pages/ExplorePage/ExplorePage';
+import ProfilePage from './Pages/ProfilePage/ProfilePage';
 
 function App() {
   const [data, setData] = useState([]);
@@ -32,6 +33,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/explore" element={<Explore />} />
+          <Route path="/edith-profile" element={<ProfilePage />} />
         </Routes>
       </div>
     </BrowserRouter>

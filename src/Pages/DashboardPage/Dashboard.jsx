@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getCurrentUser } from '../../api/auth';
 import './Dashboard.css';
 
@@ -14,6 +15,7 @@ function Dashboard() {
       <h1 className="head">WELCOME TO YOUR DASHBOARD</h1>
       <p className="head">
         {user?.first_name} {user?.last_name}
+        <Link to="/edith-profile">Edith-Profile</Link>
       </p>
     </div>
   );
