@@ -5,6 +5,7 @@
 
 .headz {
     text-align: center;
+    font-family: "Sofia";
 }
 
 .profile {
@@ -12,11 +13,11 @@
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #faebd7;
+  background-color: #B3CFDD;
 }
 
-form {
-    max-width: 350px;
+.profils {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     border: transparent;
@@ -57,8 +58,7 @@ form {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  width: 35vw;
-  height: 15vh;
+  height: 12vh;
   border-radius: 10px;
   background-color: #fff;
   text-align: left;
@@ -71,17 +71,6 @@ form {
   display: flex;
   width: 35vw;
   justify-content: center;
-}
-
-.edith-profile input {
-  height: 30px;
-  width: 80%;
-  padding: 5px 10px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #faebd7;
-  box-sizing: border-box;
 }
 
 input:focus {
@@ -108,12 +97,17 @@ p {
 
 .btnz {
  display: flex;
-  width: 22%;
+  width: 15%;
   padding: 15px;
   background-color: rgb(80, 65, 94);
   color: white;
   border: 1px solid rgb(80, 65, 94);
   cursor: pointer;
+}
+
+.btnz:hover {
+    background-color: aliceblue;
+    color: #000;
 }
 
 .edith-prof {

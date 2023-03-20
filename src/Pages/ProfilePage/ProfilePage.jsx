@@ -33,14 +33,14 @@ function Profile({ user }) {
 
   return (
     <div className="profile">
-      <form className="profile" onSubmit={handleUpdate}>
+      <h1 className="headz">My Profile</h1>
+
+      <form className="profils" onSubmit={handleUpdate}>
         <p>{isLoading ? 'Loading...' : ''}</p>
         <div className="profileInfo">
           <div className="profile_page_info">
             <div id="image">
               <div className="image" title="change profile picture">
-                <h1 className="headz">My Profile</h1>
-
                 <FaUserCircle className="userIcon" />
                 <FaEdit className="userIcon1" />
               </div>
