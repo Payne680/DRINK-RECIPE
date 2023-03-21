@@ -1,8 +1,90 @@
 .head {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin: 20%; */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+  font-family: 'sofia';
+}
+
+.sidebarz {
+  position: fixed;
+  left: -20px;
+  width: 300px;
+  min-height: 100vh;
+  background: #234;
+  transition: all 0.5s ease;
+  top: 0;
+}
+
+.sidebarz header {
+  font-size: 22px;
+  color: #000;
+  text-align: center;
+  line-height: 100px;
+  user-select: none;
+  background-color: beige;
+}
+
+.sidebarz ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 0px;
+  box-sizing: border-box;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+  transition: 0.4s;
+  text-align: center;
+  font-family: 'sofia';
+}
+
+.sidebarz ul a i {
+  margin-right: px;
+}
+
+.sidebarz ul input {
+  height: 15px;
+  width: 15px;
+  margin: 0 1rem 0 10px;
+}
+
+.sidebarz ul li {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  color: #fff;
+}
+
+.homez {
+  cursor: pointer;
+}
+
+.homez:hover {
+  background-color: rgb(80, 65, 94);
+  transition: 0.92s;
+}
+
+.logoutz {
+  background-color: #234;
+  color: #fff;
+  font-size: 20px;
+}
+
+.logoutz:hover {
+  background-color: rgb(80, 65, 94);
+  border-radius: 5px;
+}
