@@ -10,20 +10,6 @@ import Explore from './Pages/ExplorePage/ExplorePage';
 import ProfilePage from './Pages/ProfilePage/ProfilePage';
 
 function App() {
-  const [data, setData] = useState([]);
-  const [data2, setData2] = useState([]);
-  const BASE2_URL = 'http://localhost:8000/categories';
-  const BASE_URL = 'http://localhost:8000/drinks';
-  const API_KEY = '3';
-  useEffect(() => {
-    fetch(`${BASE_URL}?apiKey=${API_KEY}`)
-      .then((res) => res.json())
-      .then((res) => setData([...res]));
-    fetch(`${BASE2_URL}?apiKey=${API_KEY}`)
-      .then((res) => res.json())
-      .then((res) => setData2([...res]));
-  }, []);
-
   return (
     <BrowserRouter>
       <div>
