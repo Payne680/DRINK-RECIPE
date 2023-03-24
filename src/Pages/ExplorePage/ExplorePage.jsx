@@ -74,6 +74,96 @@ function Explore() {
           </div>
         </ul>
       </div>
+      <div className="cards">
+        <div className="card">
+          <button className="btn" type="button">
+            X
+          </button>
+          {/* <img className="img" src={pancake} alt="pancake" /> */}
+          <h5>Pancake</h5>
+          <p>Click for more details</p>
+          <button className="desc" type="button">
+            More details
+          </button>
+        </div>
+        <div className="card">
+          <button className="btn" type="button">
+            X
+          </button>
+          {/* <img className="img" src={pancake} alt="pancake" /> */}
+          <h5>Pancake</h5>
+          <p>Click for more details</p>
+          <button className="desc" type="button">
+            More details
+          </button>
+        </div>
+        <div className="card">
+          <button className="btn" type="button">
+            X
+          </button>
+          {/* <img className="img" src={pancake} alt="pancake" /> */}
+          <h5>Pancake</h5>
+          <p>Click for more details</p>
+          <button className="desc" type="button">
+            More details
+          </button>
+        </div>
+        <div className="card">
+          <button className="btn" type="button">
+            X
+          </button>
+          {/* <img className="img" src={pancake} alt="pancake" /> */}
+          <h5>Pancake</h5>
+          <p>Click for more details</p>
+          <button className="desc" type="button">
+            More details
+          </button>
+        </div>
+        <div className="card">
+          <button className="btn" type="button">
+            X
+          </button>
+          {/* <img className="img" src={pancake} alt="pancake" /> */}
+          <h5>Pancake</h5>
+          <p>Click for more details</p>
+          <button className="desc" type="button">
+            More details
+          </button>
+        </div>
+        <div className="card">
+          <button className="btn" type="button">
+            X
+          </button>
+          {/* <img className="img" src={pancake} alt="pancake" /> */}
+          <h5>Pancake</h5>
+          <p>Click for more details</p>
+          <button className="desc" type="button">
+            More details
+          </button>
+        </div>
+        <div className="card">
+          <button className="btn" type="button">
+            X
+          </button>
+          {/* <img className="img" src={pancake} alt="pancake" /> */}
+          <h5>Pancake</h5>
+          <p>Click for more details</p>
+          <button className="desc" type="button">
+            More details
+          </button>
+        </div>
+        <div className="card">
+          <button className="btn" type="button">
+            X
+          </button>
+          {/* <img className="img" src={pancake} alt="pancake" /> */}
+          <h5>Pancake</h5>
+          <p>Click for more details</p>
+          <button className="desc" type="button">
+            More details
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
