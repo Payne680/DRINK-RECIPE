@@ -41,7 +41,7 @@ function Explore() {
   };
 
   return (
-    <div>
+    <div className="cords">
       <input type="checkbox" id="check" />
       <label htmlFor="check">
         <i className="fa fa-bars" id="btn" />

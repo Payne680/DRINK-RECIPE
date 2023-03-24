@@ -5,7 +5,7 @@
     text-decoration: none;
   }
 
-  .cordz {
+  .cords {
     background-color: #234;
   }
 
@@ -128,7 +128,6 @@
   .cards {
     align-items: center;
     margin-left: 120px;
-    margin-top: 80px;
   }
   
   .card{
