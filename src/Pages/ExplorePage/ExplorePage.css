@@ -150,7 +150,7 @@
     margin-right: 10px; 
   }
 
-  .btn {
+  .btno {
     background-color: rgb(73, 73, 75);
     color: #eee;
     width: 30px;
@@ -160,7 +160,7 @@
     cursor: pointer;
   }
 
-  .btn:hover {
+  .btno:hover {
     background-color: red;
   }
 
