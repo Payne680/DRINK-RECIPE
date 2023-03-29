@@ -78,66 +78,34 @@ function Explore() {
         <div className="card">
           {/* <img className="img" src={pancake} alt="pancake" /> */}
           <h5>Whiskey</h5>
-          <p>Click for more details</p>
-          <button className="desc" type="button">
-            More details
-          </button>
         </div>
         <div className="card">
           {/* <img className="img" src={pancake} alt="pancake" /> */}
           <h5>Beer</h5>
-          <p>Click for more details</p>
-          <button className="desc" type="button">
-            More details
-          </button>
         </div>
         <div className="card">
           {/* <img className="img" src={pancake} alt="pancake" /> */}
           <h5>Cocktail</h5>
-          <p>Click for more details</p>
-          <button className="desc" type="button">
-            More details
-          </button>
         </div>
         <div className="card">
           {/* <img className="img" src={pancake} alt="pancake" /> */}
           <h5>Pancake</h5>
-          <p>Click for more details</p>
-          <button className="desc" type="button">
-            More details
-          </button>
         </div>
         <div className="card">
           {/* <img className="img" src={pancake} alt="pancake" /> */}
           <h5>Pancake</h5>
-          <p>Click for more details</p>
-          <button className="desc" type="button">
-            More details
-          </button>
         </div>
         <div className="card">
           {/* <img className="img" src={pancake} alt="pancake" /> */}
           <h5>Pancake</h5>
-          <p>Click for more details</p>
-          <button className="desc" type="button">
-            More details
-          </button>
         </div>
         <div className="card">
           {/* <img className="img" src={pancake} alt="pancake" /> */}
           <h5>Pancake</h5>
-          <p>Click for more details</p>
-          <button className="desc" type="button">
-            More details
-          </button>
         </div>
         <div className="card">
           {/* <img className="img" src={pancake} alt="pancake" /> */}
           <h5>Pancake</h5>
-          <p>Click for more details</p>
-          <button className="desc" type="button">
-            More details
-          </button>
         </div>
       </div>
     </div>
