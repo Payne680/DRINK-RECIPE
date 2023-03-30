@@ -105,7 +105,7 @@ function Explore() {
         </div>
         <div className="card">
           {/* <img className="img" src={pancake} alt="pancake" /> */}
-          <h5>Pancake</h5>
+          <h5>Wines</h5>
         </div>
       </div>
     </div>
