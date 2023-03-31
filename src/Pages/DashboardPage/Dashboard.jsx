@@ -24,16 +24,25 @@ function Dashboard() {
           <header>User Panel</header>
           <ul>
             <li>
-              <a href="dashboard">Dashboard</a>
+              <Link to="/Drinks">Drinks</Link>
+            </li>
+            <li>
+              <Link to="/Categories">Categories</Link>
+            </li>
+            <li>
+              <Link to="/Ingredients">Ingredients</Link>
+            </li>
+            <li>
+              <Link to="/Glasses">Glasses</Link>
             </li>
             <li>
               <Link to="/edith-profile">Edith Profile</Link>
             </li>
             <li>
-              <a href="jin">Settings</a>
+              <a href="jin">Home</a>
             </li>
             <li>
-              <a href="beer">Documentation</a>
+              <a href="http://localhost:3000/api-docs/">Documentation</a>
             </li>
             <li>
               <button className="logoutz" type="button" onClick={logout}>

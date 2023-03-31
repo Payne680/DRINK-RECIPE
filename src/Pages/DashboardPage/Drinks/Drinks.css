@@ -1,0 +1,37 @@
+.cardz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+  }
+
+  .btnzs {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    background-color: #222;
+    color: #eee;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .btnzs:hover {
+    background-color: #344;
+    color: #eee;
+  }
+  
+  .cards{
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 10px #000;
+    width: 300px;
+    height: 60vh;
+    border-radius: 20px;
+    padding : 0px;
+    user-select: none;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 90px;
+  }
