@@ -9,15 +9,15 @@ function Ingredients() {
           Back to home
         </button>
       </Link>
-      <div className="cards">
+      <div className="cardi">
         {/* <img className="img" src={pancake} alt="pancake" /> */}
         <h5>Ingredients</h5>
       </div>
-      <div className="cards">
+      <div className="cardi">
         {/* <img className="img" src={pancake} alt="pancake" /> */}
         <h5>Ingredients</h5>
       </div>
-      <div className="cards">
+      <div className="cardi">
         {/* <img className="img" src={pancake} alt="pancake" /> */}
         <h5>Ingredients</h5>
       </div>

@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 100px;
+    margin: 100px;
+    gap: 2rem;
   }
 
   .btnzs {
@@ -20,7 +21,7 @@
     color: #eee;
   }
   
-  .cards{
+  .cardi{
     align-items: center;
     justify-content: center;
     background-color: #eee;
