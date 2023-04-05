@@ -14,14 +14,6 @@ function Glasses() {
         {/* <img className="img" src={pancake} alt="pancake" /> */}
         <h5>glasses</h5>
       </div>
-      <div className="cardi">
-        {/* <img className="img" src={pancake} alt="pancake" /> */}
-        <h5>glasses</h5>
-      </div>
-      <div className="cardi">
-        {/* <img className="img" src={pancake} alt="pancake" /> */}
-        <h5>glasses</h5>
-      </div>
     </div>
   );
 }
