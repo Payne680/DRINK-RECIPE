@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { getCurrentUser } from '../../api/auth';
 import './Dashboard.css';
+import AuthGuard from '../../Components/AuthGuard';
 
 function Dashboard() {
   const [user, setUser] = useState();
@@ -62,4 +63,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default AuthGuard(Dashboard);

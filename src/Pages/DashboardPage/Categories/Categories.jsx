@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AuthGuard from '../../../Components/AuthGuard';
 
 function Categories() {
   return (
@@ -17,4 +18,4 @@ function Categories() {
   );
 }
 
-export default Categories;
+export default AuthGuard(Categories);
