@@ -1,50 +1,45 @@
 /* eslint-disable no-shadow */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable prefer-const */
-import React, { useState } from 'react';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../../../Components/Header';
 import './AddEdit.css';
-
-const initialState = {
-  name: '',
-  description: '',
-  imageUrl: '',
-  recipe: '',
-};
+import { addContent, getOneDrink, updateDetails } from '../../../api/auth';
 
 function AddEdith() {
-  const [state, setState] = useState(initialState);
-
-  const { name, description, imageUrl, recipe } = initialState;
-
   const navigate = useNavigate();
+  const [state] = useState();
+  const { id } = useParams();
 
-  const addDesc = async (data) => {
-    const res = await axios.post('http://localhost:3000/drink', data);
-    if (res.status === 200) {
-      toast.success(res.data);
+  useEffect(() => {
+    if (id) {
+      getOneDrink(id);
     }
-  };
+  }, [id]);
 
-  const handleSubmit = (e) => {
-    if (!name || !description || !imageUrl || !recipe) {
-      toast.error('Please provide values into each input field');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { target } = e;
+    const data = {
+      name: target.name.value,
+      description: target.description.value,
+      imageUrl: target.imageUrl.value,
+      recipe: target.recipe.value,
+    };
+    if (!id) {
+      addContent(state);
     } else {
-      e.preventDefault();
-      addDesc(state);
-      setTimeout(() => navigate('/homez'));
+      updateDetails(state, id);
     }
+
+    e.preventDefault();
+    await addContent(data);
+    navigate('/homez');
   };
 
-  const handleInputChange = (e) => {
-    let { name, value } = e.target;
-    setState({ ...state, [name]: value });
-  };
   return (
-    <div>
+    <div className="addedit">
       <Header />
       <div style={{ marginTop: '50px' }}>
         <form
@@ -62,13 +57,6 @@ function AddEdith() {
             id="name"
             name="name"
             placeholder="Enter Name...."
-            onChange={handleInputChange}
-            value={name}
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            name="last_name"
             required
           />
 
@@ -78,8 +66,7 @@ function AddEdith() {
             id="decription"
             name="description"
             placeholder="Enter your decription...."
-            onChange={handleInputChange}
-            value={description}
+            required
           />
           <label htmlFor="imageUrl">ImageUrl</label>
           <input
@@ -87,8 +74,7 @@ function AddEdith() {
             id="imageUrl"
             name="image"
             placeholder="Insert your imageUrl...."
-            onChange={handleInputChange}
-            value={imageUrl}
+            required
           />
           <label htmlFor="recipe">Recipe</label>
           <input
@@ -96,10 +82,11 @@ function AddEdith() {
             id="recipe"
             name="recipe"
             placeholder="Enter your Recipe...."
-            onChange={handleInputChange}
-            value={recipe}
+            required
           />
-          <input type="Submit" value="Add" />
+          <button className="btnx" type="submit">
+            Add
+          </button>
         </form>
       </div>
     </div>

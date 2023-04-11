@@ -34,39 +34,41 @@ function Login() {
     }
   };
   return (
-    <div className="logz">
-      <NavBar />
-      <form onSubmit={handleSubmit}>
-        <h1> Login Your Account</h1>
-        {isLoading && <p>Loading...</p>}
-        {error && <p className="error">{error}</p>}
-        <div className="input-field">
-          <input
-            type="email"
-            placeholder="Email Address"
-            name="email_address"
-            required
-          />
-          <i className="bx bx-user" />
-        </div>
-        <div className="input-field">
-          <input
-            className="input-field"
-            type="password"
-            placeholder="Password"
-            name="password"
-            required
-          />
-          <i className="bx bx-lock-alt" />
-        </div>
-        <button type="submit">Login</button>
-        <p>
-          Do not have an account?
-          <Link className="linkz" to="/register">
-            Sign Up
-          </Link>
-        </p>
-      </form>
+    <div className="formz">
+      <div className="logz">
+        <NavBar />
+        <form onSubmit={handleSubmit}>
+          <h1> Login Your Account</h1>
+          {isLoading && <p>Loading...</p>}
+          {error && <p className="error">{error}</p>}
+          <div className="input-field">
+            <input
+              type="email"
+              placeholder="Email Address"
+              name="email_address"
+              required
+            />
+            <i className="bx bx-user" />
+          </div>
+          <div className="input-field">
+            <input
+              className="input-field"
+              type="password"
+              placeholder="Password"
+              name="password"
+              required
+            />
+            <i className="bx bx-lock-alt" />
+          </div>
+          <button type="submit">Login</button>
+          <p>
+            Do not have an account?
+            <Link className="linkz" to="/register">
+              Sign Up
+            </Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 }

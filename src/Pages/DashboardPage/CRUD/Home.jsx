@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import Header from '../../../Components/Header';
+import { deleteDrink } from '../../../api/auth';
 
 function Home() {
   const [data, setData] = useState([]);
@@ -14,14 +15,12 @@ function Home() {
     }
   };
 
-  console.log('data=>', data);
-
   useEffect(() => {
     getDrinks();
   }, []);
 
   return (
-    <div>
+    <div className="">
       <Header />
       <div style={{ marginTop: '30px' }}>
         <table className="styled-table">
@@ -51,7 +50,14 @@ function Home() {
                           Edit
                         </button>
                       </Link>
-                      <button type="button" className="btn1 btn1-delete">
+                      <button
+                        type="button"
+                        className="btn1 btn1-delete"
+                        onClick={() => {
+                          deleteDrink(item.id);
+                          window.location.relaod(true);
+                        }}
+                      >
                         Delete
                       </button>
                       <Link to={`/view/${item.id}`}>
