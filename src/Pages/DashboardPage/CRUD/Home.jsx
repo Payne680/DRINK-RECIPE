@@ -17,6 +17,7 @@ function Home() {
 
   useEffect(() => {
     getDrinks();
+    deleteDrink();
   }, []);
 
   return (
@@ -53,10 +54,7 @@ function Home() {
                       <button
                         type="button"
                         className="btn1 btn1-delete"
-                        onClick={() => {
-                          deleteDrink(item.id);
-                          window.location.relaod(true);
-                        }}
+                        onClick={() => deleteDrink(item.id)}
                       >
                         Delete
                       </button>
