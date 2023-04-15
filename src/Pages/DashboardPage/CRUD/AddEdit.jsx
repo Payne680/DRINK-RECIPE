@@ -1,22 +1,22 @@
 /* eslint-disable no-shadow */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable prefer-const */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../../../Components/Header';
 import './AddEdit.css';
-import { addContent, getOneDrink, updateDetails } from '../../../api/auth';
+import { addContent } from '../../../api/auth';
+
+const initialState = {
+  name: '',
+  description: '',
+  imageUrl: '',
+  recipe: '',
+};
 
 function AddEdith() {
   const navigate = useNavigate();
-  const [state] = useState();
+  const [state] = useState(initialState);
   const { id } = useParams();
-
-  useEffect(() => {
-    if (id) {
-      getOneDrink(id);
-    }
-  }, [id]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,10 +29,7 @@ function AddEdith() {
     };
     if (!id) {
       addContent(state);
-    } else {
-      updateDetails(state, id);
     }
-
     e.preventDefault();
     await addContent(data);
     navigate('/homez');

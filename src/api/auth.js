@@ -31,7 +31,3 @@ export function updateDetails(drink) {
 export function deleteDrink(data) {
   return httpClient.delete(`drinks/${data}`, data);
 }
-
-export function getDrinks(data) {
-  return httpClient.delete(`drinks`, data);
-}

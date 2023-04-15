@@ -16,7 +16,6 @@ import Glasses from './Pages/DashboardPage/Glasses/Glasses';
 import Drinks from './Pages/DashboardPage/Drinks/Drinks';
 import Categories from './Pages/DashboardPage/Categories/Categories';
 import About from './Pages/DashboardPage/CRUD/About';
-import View from './Pages/DashboardPage/CRUD/View';
 import AddEdith from './Pages/DashboardPage/CRUD/AddEdit';
 import Home from './Pages/DashboardPage/CRUD/Home';
 import MyContext from './Context/MyContext';
@@ -42,7 +41,6 @@ function App() {
             <Route path="/homez" element={<Home />} />
             <Route path="/add" element={<AddEdith />} />
             <Route path="/update/:id" element={<AddEdith />} />
-            <Route path="/view/:id" element={<View />} />
             <Route path="/aboutz" element={<About />} />
           </Routes>
         </div>

@@ -17,8 +17,12 @@ function Home() {
 
   useEffect(() => {
     getDrinks();
-    deleteDrink();
   }, []);
+
+  const handleDelete = async (drink) => {
+    await deleteDrink(drink);
+    window.location.reload();
+  };
 
   return (
     <div className="">
@@ -54,15 +58,10 @@ function Home() {
                       <button
                         type="button"
                         className="btn1 btn1-delete"
-                        onClick={() => deleteDrink(item.id)}
+                        onClick={() => handleDelete(item.id)}
                       >
                         Delete
                       </button>
-                      <Link to={`/view/${item.id}`}>
-                        <button type="button" className="btn1 btn1-view">
-                          View
-                        </button>
-                      </Link>
                     </td>
                   </tr>
                 );
