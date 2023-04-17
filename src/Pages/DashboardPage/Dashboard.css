@@ -78,11 +78,12 @@ header {
   transition: 0.92s;
 }
 
-.logoutz {
+.dash button {
   background-color: #234;
   color: #fff;
   font-size: 20px;
   font-family: "Sofia";
+  padding: 10px;
 }
 
 .logoutz:hover {

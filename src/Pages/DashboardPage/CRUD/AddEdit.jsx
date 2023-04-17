@@ -1,23 +1,13 @@
 /* eslint-disable no-shadow */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../../Components/Header';
 import './AddEdit.css';
 import { addContent } from '../../../api/auth';
 
-const initialState = {
-  name: '',
-  description: '',
-  imageUrl: '',
-  recipe: '',
-};
-
 function AddEdith() {
   const navigate = useNavigate();
-  const [state] = useState(initialState);
-  const { id } = useParams();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { target } = e;
@@ -27,9 +17,7 @@ function AddEdith() {
       imageUrl: target.imageUrl.value,
       recipe: target.recipe.value,
     };
-    if (!id) {
-      addContent(state);
-    }
+
     e.preventDefault();
     await addContent(data);
     navigate('/homez');
@@ -58,7 +46,7 @@ function AddEdith() {
           />
 
           <label htmlFor="description">Description</label>
-          <input
+          <textarea
             type="text"
             id="decription"
             name="description"
@@ -74,7 +62,7 @@ function AddEdith() {
             required
           />
           <label htmlFor="recipe">Recipe</label>
-          <input
+          <textarea
             type="text"
             id="recipe"
             name="recipe"

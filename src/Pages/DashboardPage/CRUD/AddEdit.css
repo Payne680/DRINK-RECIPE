@@ -27,3 +27,6 @@ select[type="text"] {
     background-color: #45a049;
 }
 
+textarea {
+    padding: 5px;
+}
